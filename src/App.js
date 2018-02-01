@@ -10,7 +10,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      number: 0
+      number: ''
     }
     this.handleKeydown = this.handleKeydown.bind(this)
   }
@@ -32,7 +32,7 @@ class App extends Component {
     this.setState({
       prevNumber: this.state.number,
       math: operation,
-      number: 0
+      number: ''
     })
     
   }
@@ -46,19 +46,21 @@ class App extends Component {
   }
 
   handleResult() {
-    let result
-    if (this.state.math === "addition") {
-      result = this.state.prevNumber + this.state.number
-    } else if (this.state.math === "subtraction") {
-      result = this.state.prevNumber - this.state.number
-    } else if (this.state.math === 'multiply') {
-      result = this.state.prevNumber * this.state.number
-    } else if (this.state.math === 'divide') {
-      result = this.state.prevNumber / this.state.number
+    switch (this.state.math) {
+      case 'addition':
+        this.setState({number: this.state.prevNumber + this.state.number})
+        break
+      case 'subtraction':
+        this.setState({number: this.state.prevNumber - this.state.number})
+        break
+      case 'multiply':
+        this.setState({number: this.state.prevNumber * this.state.number})
+        break
+      case 'divide':
+        this.setState({number: this.state.prevNumber / this.state.number})
+        break
+      default: break
     }
-    this.setState({
-      number: result
-    })
   }
 
   handleKeydown(e) {
@@ -126,7 +128,7 @@ class App extends Component {
         <div>
           <button onClick={() => this.handleNumber(0)} >0</button>
         </div>
-        {this.renderEquation()}
+        <div style={{ height: "1em", borderStyle: "solid"}}>{this.renderEquation()}</div>
 
       </div>
     );
