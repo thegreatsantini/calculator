@@ -129,7 +129,7 @@ class App extends Component {
           <button onClick={() => this.handleNumber(0)} >0</button>
         </div>
         <div style={{ height: "1em", borderStyle: "solid"}}>{this.renderEquation()}</div>
-
+        <div> GitHub Push Test </div>
       </div>
     );
   }
