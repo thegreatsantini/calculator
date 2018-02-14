@@ -1,10 +1,16 @@
 import React, { Component } from "react";
 import "./App.css";
+import { TextField, FloatingActionButton } from "material-ui";
 
 // Task: keyboard (enter, backspace, operators)
 // Task: Material Design
 // Task: Equation Ui
 // Task: 4 + 2 + 3 = 9
+
+const style = {
+  margin: 5
+};
+
 class App extends Component {
   constructor() {
     super();
@@ -47,6 +53,15 @@ class App extends Component {
     }));
   }
 
+  handleNumberState() {
+    if ( typeof this.state.number === 'number' ) {
+      const toPercent = this.state.number / 100;
+      this.setState({
+        number: toPercent
+      })
+    } 
+  }
+
   handleResult() {
     switch (this.state.math) {
       case "addition":
@@ -67,17 +82,16 @@ class App extends Component {
   }
 
   handleKeydown(e) {
-    console.log("e.key", e.key);
-    e.preventDefault()
-    e.stopPropagation()
+    e.preventDefault();
+    e.stopPropagation();
     if (Number.isInteger(Number(e.key))) {
       this.handleNumber(e.key);
     }
 
     if (e.key === "-") {
-      this.handleOperator('subtraction')
-    } else if ( e.key === 'Enter' ) {
-      this.handleResult()
+      this.handleOperator("subtraction");
+    } else if (e.key === "Enter") {
+      this.handleResult();
     }
   }
 
@@ -100,7 +114,7 @@ class App extends Component {
     return (
       <div>
         {this.state.prevNumber} {operationMap[math]} {this.state.number}{" "}
-        {this.state.result !== "" && '='} {this.state.result}
+        {this.state.result !== "" && "="} {this.state.result}
       </div>
     );
   }
@@ -108,32 +122,152 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <input type="text" disabled value={this.state.number} />
+        <TextField hintText="Do Maths Here" value={this.state.number} />
         <div>
-          <button onClick={() => this.handleClear()}>C</button>
-          <button onClick={() => this.handleResult()}>=</button>
-          <button onClick={() => this.handleOperator("addition")}>+</button>
-          <button onClick={() => this.handleOperator("subtraction")}>-</button>
+          <FloatingActionButton
+            style={style}
+            primary={true}
+            label="C"
+            onClick={() => this.handleClear()}
+          >
+            C
+          </FloatingActionButton>
+          <FloatingActionButton
+            style={style}
+            primary={true}
+            label="="
+            onClick={() => this.handleResult()}
+          >
+            =
+          </FloatingActionButton>
+          <FloatingActionButton
+            style={style}
+            primary={true}
+            label="+"
+            onClick={() => this.handleOperator("addition")}
+          >
+            +
+          </FloatingActionButton>
+          <FloatingActionButton
+            style={style}
+            primary={true}
+            label="-"
+            onClick={() => this.handleOperator("subtraction")}
+          >
+            -
+          </FloatingActionButton>
         </div>
         <div>
-          <button onClick={() => this.handleNumber(1)}>1</button>
-          <button onClick={() => this.handleNumber(2)}>2</button>
-          <button onClick={() => this.handleNumber(3)}>3</button>
-          <button onClick={() => this.handleOperator("multiply")}>X</button>
+          <FloatingActionButton
+            style={style}
+            secondary={true}
+            label="1"
+            onClick={() => this.handleNumber(1)}
+          >
+            1
+          </FloatingActionButton>
+          <FloatingActionButton
+            style={style}
+            secondary={true}
+            label="2"
+            onClick={() => this.handleNumber(2)}
+          >
+            2
+          </FloatingActionButton>
+          <FloatingActionButton
+            style={style}
+            secondary={true}
+            label="3"
+            onClick={() => this.handleNumber(3)}
+          >
+            3
+          </FloatingActionButton>
+          <FloatingActionButton
+            style={style}
+            primary={true}
+            label="X"
+            onClick={() => this.handleOperator("multiply")}
+          >
+            x
+          </FloatingActionButton>
         </div>
         <div>
-          <button onClick={() => this.handleNumber(4)}>4</button>
-          <button onClick={() => this.handleNumber(5)}>5</button>
-          <button onClick={() => this.handleNumber(6)}>6</button>
-          <button onClick={() => this.handleOperator("divide")}>/</button>
+          <FloatingActionButton
+            style={style}
+            secondary={true}
+            label="4"
+            onClick={() => this.handleNumber(4)}
+          >
+            4
+          </FloatingActionButton>
+          <FloatingActionButton
+            style={style}
+            secondary={true}
+            label="5"
+            onClick={() => this.handleNumber(5)}
+          >
+            5
+          </FloatingActionButton>
+          <FloatingActionButton
+            style={style}
+            secondary={true}
+            label="6"
+            onClick={() => this.handleNumber(6)}
+          >
+            6
+          </FloatingActionButton>
+          <FloatingActionButton
+            style={style}
+            primary={true}
+            label="/"
+            onClick={() => this.handleOperator("divide")}
+          >
+            /
+          </FloatingActionButton>
         </div>
         <div>
-          <button onClick={() => this.handleNumber(7)}>7</button>
-          <button onClick={() => this.handleNumber(8)}>8</button>
-          <button onClick={() => this.handleNumber(9)}>9</button>
+          <FloatingActionButton
+            style={style}
+            secondary={true}
+            label="7"
+            onClick={() => this.handleNumber(7)}
+          >
+            7
+          </FloatingActionButton>
+          <FloatingActionButton
+            style={style}
+            secondary={true}
+            label="8"
+            onClick={() => this.handleNumber(8)}
+          >
+            8
+          </FloatingActionButton>
+          <FloatingActionButton
+            style={style}
+            secondary={true}
+            label="9"
+            onClick={() => this.handleNumber(9)}
+          >
+            9
+          </FloatingActionButton>
+          <FloatingActionButton
+            style={style}
+            primary={true}
+            label="%"
+            onClick={() => this.handleNumberState()}
+          >
+            %{" "}
+          </FloatingActionButton>
         </div>
         <div>
-          <button onClick={() => this.handleNumber(0)}>0</button>
+          <FloatingActionButton
+            style={style}
+            secondary={true}
+            label="0"
+            onClick={() => this.handleNumber(0)}
+          >
+            0
+          </FloatingActionButton>
         </div>
         <div style={{ height: "1em", borderStyle: "solid" }}>
           {this.renderEquation()}
