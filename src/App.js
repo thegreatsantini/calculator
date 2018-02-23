@@ -1,6 +1,24 @@
 import React, { Component } from "react";
 import "./App.css";
 import { TextField, FloatingActionButton } from "material-ui";
+// import { 
+//   add,
+//   division,
+//   eight,
+//   equals,
+//   five,
+//   four,
+//   minus,
+//   multiply,
+//   nine,
+//   one,
+//   percent,
+//   seven,
+//   six,
+//   ten,
+//   three,
+//   two
+//  } from '../assets/my-icons-collection/svg'
 
 // Task: keyboard (enter, backspace, operators)
 // Task: Material Design
@@ -54,12 +72,10 @@ class App extends Component {
   }
 
   handleNumberState() {
-    if ( typeof this.state.number === 'number' ) {
       const toPercent = this.state.number / 100;
       this.setState({
         number: toPercent
       })
-    } 
   }
 
   handleResult() {
@@ -125,6 +141,7 @@ class App extends Component {
         <TextField hintText="Do Maths Here" value={this.state.number} />
         <div>
           <FloatingActionButton
+            className="buttonContainer"
             style={style}
             primary={true}
             label="C"
@@ -133,6 +150,7 @@ class App extends Component {
             C
           </FloatingActionButton>
           <FloatingActionButton
+            className="buttonContainer"
             style={style}
             primary={true}
             label="="
@@ -141,6 +159,7 @@ class App extends Component {
             =
           </FloatingActionButton>
           <FloatingActionButton
+            className="buttonContainer"
             style={style}
             primary={true}
             label="+"
@@ -149,6 +168,7 @@ class App extends Component {
             +
           </FloatingActionButton>
           <FloatingActionButton
+            className="buttonContainer"
             style={style}
             primary={true}
             label="-"
@@ -159,6 +179,7 @@ class App extends Component {
         </div>
         <div>
           <FloatingActionButton
+            className="buttonContainer"
             style={style}
             secondary={true}
             label="1"
@@ -167,6 +188,7 @@ class App extends Component {
             1
           </FloatingActionButton>
           <FloatingActionButton
+            className="buttonContainer"
             style={style}
             secondary={true}
             label="2"
@@ -175,6 +197,7 @@ class App extends Component {
             2
           </FloatingActionButton>
           <FloatingActionButton
+            className="buttonContainer"
             style={style}
             secondary={true}
             label="3"
@@ -183,6 +206,7 @@ class App extends Component {
             3
           </FloatingActionButton>
           <FloatingActionButton
+            className="buttonContainer"
             style={style}
             primary={true}
             label="X"
@@ -193,6 +217,7 @@ class App extends Component {
         </div>
         <div>
           <FloatingActionButton
+            className="buttonContainer"
             style={style}
             secondary={true}
             label="4"
@@ -201,6 +226,7 @@ class App extends Component {
             4
           </FloatingActionButton>
           <FloatingActionButton
+            className="buttonContainer"
             style={style}
             secondary={true}
             label="5"
@@ -209,6 +235,7 @@ class App extends Component {
             5
           </FloatingActionButton>
           <FloatingActionButton
+            className="buttonContainer"
             style={style}
             secondary={true}
             label="6"
@@ -217,6 +244,7 @@ class App extends Component {
             6
           </FloatingActionButton>
           <FloatingActionButton
+            className="buttonContainer"
             style={style}
             primary={true}
             label="/"
@@ -227,6 +255,7 @@ class App extends Component {
         </div>
         <div>
           <FloatingActionButton
+            className="buttonContainer"
             style={style}
             secondary={true}
             label="7"
@@ -235,6 +264,7 @@ class App extends Component {
             7
           </FloatingActionButton>
           <FloatingActionButton
+            className="buttonContainer"
             style={style}
             secondary={true}
             label="8"
@@ -243,6 +273,7 @@ class App extends Component {
             8
           </FloatingActionButton>
           <FloatingActionButton
+            className="buttonContainer"
             style={style}
             secondary={true}
             label="9"
@@ -251,6 +282,7 @@ class App extends Component {
             9
           </FloatingActionButton>
           <FloatingActionButton
+            className="buttonContainer"
             style={style}
             primary={true}
             label="%"
@@ -261,6 +293,7 @@ class App extends Component {
         </div>
         <div>
           <FloatingActionButton
+            className="buttonContainer"
             style={style}
             secondary={true}
             label="0"
