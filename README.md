@@ -12,6 +12,6 @@ First run `git clone https://github.com/thegreatsantini/calculator.git` in CLI
 
 Second run `npm install`
 
-Third run `npm start` to 
+Third run `npm start` 
 
 
