@@ -6,12 +6,15 @@ copy and paste `The-Sulivan-Solver.surge.sh`  onto your Google search bar to vie
 
 View the app online [here](The-Sulivan-Solver.surge.sh)
 
-To make a contribution or run the app
+#To Install
 
-First run `git clone https://github.com/thegreatsantini/calculator.git` in CLI
+- Clone  repo
+`git clone https://github.com/thegreatsantini/calculator.git`
 
-Second run `npm install`
+- Istall Dependencies
+`npm install`
 
-Third run `npm start` 
+- Run app
+ `npm start` 
 
 
