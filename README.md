@@ -6,7 +6,7 @@ copy and paste `The-Sulivan-Solver.surge.sh`  onto your Google search bar to vie
 
 View the app online [here](The-Sulivan-Solver.surge.sh)
 
-#To Install
+# <h2>To Install</h2>
 
 - Clone  repo
 `git clone https://github.com/thegreatsantini/calculator.git`
