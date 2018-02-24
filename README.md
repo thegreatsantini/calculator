@@ -17,4 +17,9 @@ View the app online [here](The-Sulivan-Solver.surge.sh)
 - Run app
  `npm start` 
 
+# Tasks
+
+1) keyboard input (enter, backspace, operators)
+3) Improve overall design 
+4) Multiple operations, follows order of operations
 
