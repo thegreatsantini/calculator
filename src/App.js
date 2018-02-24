@@ -20,10 +20,7 @@ import { TextField, FloatingActionButton } from "material-ui";
 //   two
 //  } from '../assets/my-icons-collection/svg'
 
-// Task: keyboard (enter, backspace, operators)
-// Task: Material Design
-// Task: Equation Ui
-// Task: 4 + 2 + 3 = 9
+
 
 const style = {
   margin: 5
