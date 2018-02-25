@@ -2,7 +2,7 @@
 
 This is my first large non code along functional React App.
 
-copy and paste `The-Sulivan-Solver.surge.sh`  onto your Google search bar to view the working app.
+copy and paste the address directly  `The-Sulivan-Solver.surge.sh`  to view the working app.
 
 View the app online [here](The-Sulivan-Solver.surge.sh)
 
