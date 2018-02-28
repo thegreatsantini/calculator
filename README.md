@@ -4,7 +4,7 @@ This is my first large non code along functional React App.
 
 copy and paste the address directly  `The-Sulivan-Solver.surge.sh`  to view the working app.
 
-View the app online [here](The-Sulivan-Solver.surge.sh)
+~~View the app online [here](The-Sulivan-Solver.surge.sh)~~
 
 # <h2>To Install</h2>
 
